@@ -100,9 +100,6 @@ class BlendshapeExportImportTool:
                 inbetween_weight = inbetween_data['weight']
                 inbetween_components = inbetween_data['components']
                 inbetween_positions = inbetween_data['positions']
-                #inbetween_positions needs to be a list of tuples of 4 items not a list of lists with 4 items
-                inbetween_positions = [tuple(inbetween_positions[i]) for i in range(len(inbetween_positions))]
-
                 adjusted_target_mesh = BlendshapeExportImportTool.set_inbetween_positions(blendshapeNode, target_index, inbetween_item, inbetween_components, inbetween_positions,adjusted_target_mesh_list)
                 if adjusted_target_mesh:
                     adjusted_target_mesh_list.append(adjusted_target_mesh)
